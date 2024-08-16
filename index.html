@@ -1,0 +1,45 @@
+<center>
+<style>
+    div{
+        background-color: rgb(178, 139, 173);
+        width: 800px;
+        height: 600px;
+    }
+
+</style>
+<div>
+    
+<h1>WELCOME TO MY GAME</h1>
+<h3>GUESS THE NUMBER</h3>
+<P>IF YOU WON THE GAME I WILL GIVE TOU CHOCOLATE</P>
+
+<p>put your number here||</p>
+<input id="guess">
+<button onclick="chek()">check</button>
+<p id="para">you are right/wrong</p>
+<p id="score">Score:10</p>
+<script>
+    var guessnum=document.getElementById("guess")
+    var guessnum1=document.getElementById("para")
+    var guessnum2=document.getElementById("score")
+    var totalscore=10
+    var randomnum=Math.floor(Math.random()*10+1)
+    function chek()
+    {
+        var enterednum=guessnum.value
+        if(enterednum==randomnum)
+    {
+        para.textContent="Right"
+        alert("YOU WON...")    
+    }
+    else{
+
+        totalscore=totalscore-1
+        guessnum2.textContent="Score:"+totalscore
+        para.textContent="Wrong"
+    }
+    }
+
+</script>
+</div>
+</center>
